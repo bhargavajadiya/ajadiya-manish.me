@@ -1,0 +1,3390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <!--
+    Modified from the Debian original for Ubuntu
+    Last updated: 2022-03-22
+    See: https://launchpad.net/bugs/1966004
+  -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ajadiya Manish - Elite Developer Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style type="text/css" media="screen">
+  :root {
+    --primary-gradient: linear-gradient(135deg, #000000 0%, #333333 50%, #666666 100%);
+    --secondary-gradient: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    --luxury-gradient: linear-gradient(135deg, #f8f8f8 0%, #ffffff 50%, #f0f0f0 100%);
+    --dark-gradient: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%);
+    --gold-gradient: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    --text-primary: #000000;
+    --text-secondary: #666666;
+    --white: #ffffff;
+    --black: #000000;
+    --gray-light: #f8f8f8;
+    --gray-medium: #cccccc;
+    --gray-dark: #333333;
+    --shadow-light: 0 10px 40px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 20px 60px rgba(0, 0, 0, 0.15);
+    --shadow-heavy: 0 30px 80px rgba(0, 0, 0, 0.2);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body, html {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    line-height: 1.6;
+    color: var(--text-primary);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  /* Hide default scrollbar and create custom one */
+  ::-webkit-scrollbar {
+    width: 12px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #f8f8f8 0%, #ffffff 50%, #f0f0f0 100%);
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #000000 0%, #333333 50%, #666666 100%);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #333333 0%, #000000 50%, #1a1a1a 100%);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Custom scrollbar corner */
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Jump to Top Button */
+  .jump-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--black);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: var(--shadow-medium);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+  }
+
+  .jump-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .jump-to-top:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: var(--shadow-heavy);
+    background: var(--gray-dark);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="g1" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:0" /></radialGradient></defs><circle cx="100" cy="100" r="80" fill="url(%23g1)"/><circle cx="400" cy="200" r="60" fill="url(%23g1)"/><circle cx="700" cy="150" r="100" fill="url(%23g1)"/><circle cx="200" cy="400" r="70" fill="url(%23g1)"/><circle cx="600" cy="450" r="90" fill="url(%23g1)"/><circle cx="900" cy="300" r="50" fill="url(%23g1)"/><circle cx="150" cy="700" r="85" fill="url(%23g1)"/><circle cx="500" cy="750" r="75" fill="url(%23g1)"/><circle cx="800" cy="650" r="95" fill="url(%23g1)"/></svg>') no-repeat;
+    background-size: cover;
+    pointer-events: none;
+    z-index: -1;
+    animation: floatingBg 20s ease-in-out infinite;
+  }
+
+  @keyframes floatingBg {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(1deg); }
+    66% { transform: translateY(-10px) rotate(-1deg); }
+  }
+  .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .main_page {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(30px);
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+    animation: premiumFadeIn 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border: none;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .main_page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(0, 0, 0, 0.05) 50%, transparent 70%);
+    pointer-events: none;
+    animation: shimmer 4s ease-in-out infinite;
+  }
+
+  @keyframes premiumFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(60px) scale(0.95);
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .page_header {
+    background: var(--black);
+    color: white;
+    text-align: center;
+    padding: 120px 60px;
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    filter: blur(2px) grayscale(100%);
+    transition: all 0.3s ease;
+  }
+
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+    mix-blend-mode: multiply;
+  }
+
+  .profile-image {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .profile-circle {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: var(--gold-gradient);
+    padding: 6px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: profileFloat 4s ease-in-out infinite;
+    position: relative;
+  }
+
+  .profile-circle::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: profileGlow 3s ease-in-out infinite;
+    z-index: -1;
+  }
+
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
+
+  .profile-circle:hover .profile-img {
+    transform: scale(1.05);
+  }
+
+  @keyframes profileFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(2deg); }
+  }
+
+  @keyframes profileGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  .page_header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+    animation: moveGradient 15s ease-in-out infinite;
+  }
+
+  .page_header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gold-gradient);
+    box-shadow: 0 0 20px rgba(247, 151, 30, 0.5);
+  }
+
+  @keyframes moveGradient {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.05); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5em;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: luxurySlideIn 1.5s cubic-bezier(0.23, 1, 0.32, 1) 0.3s both;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 50%, #e8e9ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+
+  .hero-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--gold-gradient);
+    border-radius: 2px;
+    box-shadow: 0 0 15px rgba(247, 151, 30, 0.6);
+  }
+
+  .hero-subtitle {
+    font-size: 1.6em;
+    font-weight: 300;
+    opacity: 0.95;
+    margin-bottom: 30px;
+    animation: luxurySlideIn 1.5s cubic-bezier(0.23, 1, 0.32, 1) 0.6s both;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .hero-description {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    opacity: 0.9;
+    animation: luxuryFadeIn 1.5s cubic-bezier(0.23, 1, 0.32, 1) 0.9s both;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  @keyframes luxurySlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(80px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes luxuryFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: luxurySlideIn 1.5s cubic-bezier(0.23, 1, 0.32, 1) 1.2s both;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 40px;
+    border-radius: 60px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+  }
+
+  .btn:hover::before {
+    left: 100%;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #333333 0%, #000000 100%);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-primary .fas {
+    color: #ffffff;
+    margin-right: 8px;
+  }
+
+  .btn-primary .btn-text {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .btn-secondary {
+    background: var(--gold-gradient);
+    color: #2c3e50;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 32px rgba(247, 151, 30, 0.4);
+    font-weight: 700;
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(247, 151, 30, 0.6);
+    filter: brightness(1.1);
+  }
+
+  .btn-success {
+    background: linear-gradient(135deg, #25D366 0%, #20c55a 100%);
+    color: #ffffff;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4);
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-success .fab {
+    color: #ffffff;
+    margin-right: 8px;
+  }
+
+  .btn-success .btn-text {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .btn-success::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+  }
+
+  .btn-success:hover::before {
+    left: 100%;
+  }
+
+  .btn-success:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+    background: linear-gradient(135deg, #20c55a 0%, #25D366 100%);
+    animation: whatsappPulse 0.6s ease-in-out;
+    color: #ffffff;
+  }
+
+  .btn-success:hover .fab,
+  .btn-success:hover .btn-text {
+    color: #ffffff;
+  }
+
+  @keyframes whatsappPulse {
+    0%, 100% { box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6); }
+    50% { box-shadow: 0 20px 50px rgba(37, 211, 102, 0.8), 0 0 0 10px rgba(37, 211, 102, 0.1); }
+  }
+
+  @keyframes emailPulse {
+    0%, 100% { 
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+    50% { 
+      transform: translateY(-8px) scale(1.08);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  /* Mobile responsive adjustments for buttons */
+  @media (max-width: 768px) {
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 0 20px;
+    }
+    
+    .btn {
+      width: 100%;
+      max-width: 320px;
+      justify-content: center;
+      padding: 16px 30px;
+      font-size: 1rem;
+    }
+    
+    .btn .fas,
+    .btn .fab {
+      font-size: 1.2em;
+      margin-right: 10px;
+    }
+    
+    .btn-text {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  /* Tablet responsive adjustments */
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .cta-buttons {
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .btn {
+      min-width: 200px;
+      padding: 16px 35px;
+    }
+  }
+
+  /* Small mobile devices */
+  @media (max-width: 480px) {
+    .cta-buttons {
+      gap: 15px;
+      padding: 0 15px;
+    }
+    
+    .btn {
+      max-width: 100%;
+      padding: 14px 25px;
+      font-size: 0.95rem;
+    }
+    
+    .btn .fas,
+    .btn .fab {
+      font-size: 1.1em;
+    }
+    
+    .contact-title {
+      font-size: 2.5em;
+    }
+    
+    .contact-description {
+      font-size: 1.2em;
+      padding: 0 15px;
+    }
+  }
+
+  /* Large screens */
+  @media (min-width: 1200px) {
+    .cta-buttons {
+      gap: 35px;
+    }
+    
+    .btn {
+      padding: 20px 45px;
+      font-size: 1.15rem;
+    }
+  }
+
+  /* Help Desk Bot Styles - Premium Theme */
+  .help-desk-bot {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .bot-trigger {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .bot-trigger::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: translateX(-100%) rotate(45deg);
+    transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .bot-trigger:hover::before {
+    transform: translateX(100%) rotate(45deg);
+  }
+
+  .bot-trigger:hover {
+    transform: scale(1.15) translateY(-3px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 0 20px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #333333 0%, #1a1a1a 50%, #000000 100%);
+  }
+
+  .bot-pulse {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    animation: premiumPulse 3s infinite;
+  }
+
+  .bot-pulse::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: premiumPulse 3s infinite 0.5s;
+  }
+
+  @keyframes premiumPulse {
+    0% {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+    70% {
+      transform: scale(1.4);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+  }
+
+  .bot-chat-window {
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+    width: 380px;
+    height: 500px;
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 25px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    transform: scale(0) translateY(30px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(30px);
+  }
+
+  .bot-chat-window::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    pointer-events: none;
+    animation: windowShimmer 6s ease-in-out infinite;
+  }
+
+  @keyframes windowShimmer {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+  }
+
+  .bot-chat-window.active {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    animation: windowBounce 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  @keyframes windowBounce {
+    0% { transform: scale(0) translateY(30px); }
+    60% { transform: scale(1.05) translateY(-5px); }
+    100% { transform: scale(1) translateY(0); }
+  }
+
+  .bot-header {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%);
+    color: white;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bot-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    animation: headerGlow 4s ease-in-out infinite;
+  }
+
+  @keyframes headerGlow {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+  }
+
+  .bot-avatar {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 50%, #e0e0e0 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-size: 1.4em;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    animation: avatarFloat 4s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+  }
+
+  @keyframes avatarFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-3px) rotate(5deg); }
+  }
+
+  .bot-info h4 {
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+  }
+
+  .bot-info p {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+  }
+
+  .bot-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    background: #00ff88;
+    border-radius: 50%;
+    animation: statusPulse 2s ease-in-out infinite;
+    box-shadow: 0 0 10px #00ff88;
+  }
+
+  @keyframes statusPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.2); }
+  }
+
+  .bot-close {
+    margin-left: auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 1.3em;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 2;
+  }
+
+  .bot-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1) rotate(90deg);
+  }
+
+  .bot-messages {
+    height: 340px;
+    overflow-y: auto;
+    padding: 25px;
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+  }
+
+  .bot-messages::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .bot-messages::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+
+  .bot-messages::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #000000, #333333);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+
+  .bot-messages::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #333333, #000000);
+  }
+
+  .bot-message {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    animation: messageSlideIn 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    max-width: 85%;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .bot-message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+    border-radius: 20px 20px 0 0;
+  }
+
+  .bot-message.user {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%);
+    color: white;
+    margin-left: auto;
+    text-align: right;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .bot-message.user::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  }
+
+  @keyframes messageSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .bot-input-area {
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .bot-input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    outline: none;
+    font-size: 1em;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+  }
+
+  .bot-input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 1);
+  }
+
+  .bot-send {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    font-size: 1.2em;
+  }
+
+  .bot-send:hover {
+    transform: scale(1.1) rotate(15deg);
+    background: linear-gradient(135deg, #333333 0%, #000000 100%);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  }
+
+  .quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .quick-action {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .quick-action::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: -1;
+  }
+
+  .quick-action:hover::before {
+    left: 0;
+  }
+
+  .quick-action:hover {
+    color: white;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Typing indicator */
+  .typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    max-width: 85%;
+    animation: messageSlideIn 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .typing-dots {
+    display: flex;
+    gap: 4px;
+  }
+
+  .typing-dot {
+    width: 8px;
+    height: 8px;
+    background: #666;
+    border-radius: 50%;
+    animation: typingBounce 1.4s infinite ease-in-out;
+  }
+
+  .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+  .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+  @keyframes typingBounce {
+    0%, 80%, 100% { transform: scale(0.8); opacity: 0.5; }
+    40% { transform: scale(1.2); opacity: 1; }
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .help-desk-bot {
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .bot-trigger {
+      width: 60px;
+      height: 60px;
+      font-size: 1.5em;
+    }
+
+    .bot-chat-window {
+      width: 340px;
+      height: 450px;
+      bottom: 80px;
+    }
+
+    .bot-messages {
+      height: 290px;
+    }
+  }
+
+  /* Download Button Animation Styles */
+  .download-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 0 0 60px 60px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .progress-bar-download {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .progress-fill-download {
+    height: 100%;
+    background: linear-gradient(90deg, #ffffff 0%, #f0f0f0 50%, #ffffff 100%);
+    width: 0%;
+    transition: width 0.1s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: downloadShimmer 2s ease-in-out infinite;
+  }
+
+  @keyframes downloadShimmer {
+    0%, 100% { 
+      background: linear-gradient(90deg, #ffffff 0%, #f0f0f0 50%, #ffffff 100%);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    50% { 
+      background: linear-gradient(90deg, #f0f0f0 0%, #ffffff 50%, #f0f0f0 100%);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    }
+  }
+
+  .btn-secondary.downloading {
+    pointer-events: none;
+    background: linear-gradient(135deg, #e6c200 0%, #f5d700 100%);
+    animation: downloadPulse 1.5s ease-in-out infinite;
+  }
+
+  .btn-secondary.downloading .download-progress {
+    opacity: 1;
+  }
+
+  .btn-secondary.downloading .download-icon {
+    animation: downloadBounce 0.6s ease-in-out infinite;
+  }
+
+  .btn-secondary.completed {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    animation: completedPulse 0.8s ease-in-out;
+  }
+
+  .btn-secondary.completed .download-icon::before {
+    content: '\f00c';
+    animation: checkmarkPop 0.5s ease-in-out;
+  }
+
+  @keyframes downloadPulse {
+    0%, 100% { transform: translateY(-5px) scale(1.05); }
+    50% { transform: translateY(-8px) scale(1.08); }
+  }
+
+  @keyframes downloadBounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-3px) rotate(-5deg); }
+    75% { transform: translateY(-1px) rotate(5deg); }
+  }
+
+  @keyframes completedPulse {
+    0% { transform: translateY(-5px) scale(1.05); }
+    50% { transform: translateY(-8px) scale(1.1); }
+    100% { transform: translateY(-5px) scale(1.05); }
+  }
+
+  @keyframes checkmarkPop {
+    0% { transform: scale(0) rotate(0deg); }
+    50% { transform: scale(1.3) rotate(180deg); }
+    100% { transform: scale(1) rotate(360deg); }
+  }
+
+  .btn-text {
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+  }
+
+  .btn-secondary.downloading .btn-text::after {
+    content: 'ing...';
+    animation: dotsPulse 1s ease-in-out infinite;
+  }
+
+  .btn-secondary.completed .btn-text {
+    content: 'View Resume';
+  }
+
+  .btn-secondary.completed .btn-text::before {
+    content: 'View Resume';
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: textSlideIn 0.5s ease-in-out;
+  }
+
+  .btn-secondary.completed .btn-text::after {
+    content: '';
+  }
+
+  @keyframes dotsPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes textSlideIn {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  .content-section {
+    padding: 100px 60px;
+    position: relative;
+  }
+
+  .content-section:nth-child(even) {
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--gold-gradient);
+    border-radius: 2px;
+  }
+
+  .section-subtitle {
+    font-size: 1.3em;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+  }
+
+  .feature-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 25px;
+    box-shadow: var(--shadow-light);
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary-gradient);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .feature-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: var(--shadow-heavy);
+    border-color: rgba(102, 126, 234, 0.3);
+  }
+
+  .feature-icon {
+    width: 100px;
+    height: 100px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    font-size: 2.5em;
+    color: white;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    transition: all 0.4s ease;
+  }
+
+  .feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+  }
+
+  .feature-title {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+  }
+
+  .feature-description {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1.1em;
+  }
+
+  .skills-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 60px;
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+    border-radius: 25px;
+    padding: 50px 0;
+    box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .skills-container::before,
+  .skills-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .skills-container::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3), transparent);
+  }
+
+  .skills-container::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3), transparent);
+  }
+
+  .skills-slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .skills-track {
+    display: flex;
+    animation: scrollSkillsContinuous 25s linear infinite;
+    gap: 30px;
+    align-items: center;
+    width: calc(200% + 60px);
+  }
+
+  .skills-track::after {
+    content: '';
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  /* Duplicate skills for seamless loop */
+  .skills-track::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    height: 100%;
+  }
+
+  @keyframes scrollSkillsContinuous {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .skill-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    min-width: 180px;
+    flex-shrink: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+  }
+
+  .skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #000000, #333333);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .skill-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .skill-card:hover {
+    transform: translateY(-15px) scale(1.08) rotateX(5deg) rotateY(5deg) translateZ(30px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+  }
+
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    border-radius: 12px;
+    object-fit: contain;
+    background: var(--gray-light);
+    padding: 8px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .skill-card:hover .skill-icon {
+    transform: scale(1.2) rotate(10deg) translateZ(20px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
+  }
+
+  .skill-card h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+  }
+
+  .skill-card:hover h4 {
+    color: #000000;
+    transform: translateZ(10px);
+    font-weight: 700;
+  }
+
+  .level-label {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--black);
+    background: linear-gradient(135deg, #f8f8f8, #ffffff);
+    padding: 8px 15px;
+    border-radius: 15px;
+    border: 2px solid var(--black);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .level-label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #000000, #333333);
+    transition: left 0.4s ease;
+    z-index: -1;
+  }
+
+  .skill-card:hover .level-label::before {
+    left: 0;
+  }
+
+  .skill-card:hover .level-label {
+    color: white;
+    transform: translateZ(15px);
+    border-color: #333333;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Pause animation only on individual skill card hover */
+  .skill-card:hover ~ .skill-card,
+  .skill-card:hover {
+    animation-play-state: running;
+  }
+  
+  .skills-container:hover .skills-track {
+    animation-play-state: paused;
+  }
+  
+  .skill-card:hover {
+    z-index: 10;
+    position: relative;
+  }
+
+  .stats-section {
+    background: var(--dark-gradient);
+    padding: 120px 60px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon points="0,0 1000,300 1000,1000 0,700" fill="rgba(255,255,255,0.03)"/><polygon points="0,200 1000,0 1000,400 0,600" fill="rgba(255,255,255,0.02)"/></svg>');
+    animation: floatPattern 20s linear infinite;
+  }
+
+  @keyframes floatPattern {
+    0% { transform: translateX(-100px); }
+    100% { transform: translateX(100px); }
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 60px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .stat-item {
+    position: relative;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+  }
+
+  .stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    font-weight: 800;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    text-shadow: 0 0 30px rgba(247, 151, 30, 0.5);
+  }
+
+  .stat-label {
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .contact-section {
+    background: var(--luxury-gradient);
+    color: var(--text-primary);
+    padding: 120px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    animation: pulseGlow 8s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  .contact-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    font-weight: 700;
+    background: var(--dark-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .contact-description {
+    font-size: 1.4em;
+    margin-bottom: 60px;
+    opacity: 0.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+
+  .social-link {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 2em;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.4s ease;
+    z-index: -1;
+  }
+
+  .social-link:hover::before {
+    transform: scale(1);
+  }
+
+  .social-link:hover {
+    transform: translateY(-15px) scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+
+  /* Premium scroll indicator */
+  .scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+  }
+
+  .scroll-progress {
+    height: 100%;
+    background: var(--gold-gradient);
+    width: 0%;
+    transition: width 0.1s ease;
+    box-shadow: 0 0 10px rgba(247, 151, 30, 0.6);
+  }
+
+  /* Floating elements */
+  .floating-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 20s infinite linear;
+  }
+
+  .shape:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .shape:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: 15%;
+    animation-delay: -5s;
+  }
+
+  .shape:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: -10s;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-30px) rotate(120deg); }
+    66% { transform: translateY(-15px) rotate(240deg); }
+    100% { transform: translateY(0px) rotate(360deg); }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.8em;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    
+    .hero-description {
+      font-size: 1.1em;
+      margin-bottom: 40px;
+      padding: 0 20px;
+    }
+    
+    .content-section {
+      padding: 60px 20px;
+    }
+    
+    .page_header {
+      padding: 60px 20px;
+      min-height: 70vh;
+    }
+    
+    .profile-circle {
+      width: 140px;
+      height: 140px;
+      margin-bottom: 20px;
+    }
+    
+    .section-title {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1em;
+      padding: 0 15px;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      padding: 0 20px;
+    }
+    
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+    
+    .feature-card {
+      padding: 35px 25px;
+    }
+    
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    
+    .stat-number {
+      font-size: 3em;
+    }
+    
+    .social-links {
+      gap: 15px;
+    }
+    
+    .social-link {
+      width: 55px;
+      height: 55px;
+      font-size: 1.3em;
+    }
+    
+    .contact-title {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+    
+    .contact-description {
+      font-size: 1.1em;
+      margin-bottom: 40px;
+      padding: 0 20px;
+    }
+    
+    .skills-container {
+      margin-top: 40px;
+      padding: 40px 0;
+    }
+    
+    .skill-card {
+      min-width: 160px;
+      padding: 25px 20px;
+    }
+  }
+
+  /* Small mobile devices (480px and below) */
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 2.2em;
+    }
+    
+    .hero-subtitle {
+      font-size: 1em;
+    }
+    
+    .hero-description {
+      font-size: 1em;
+    }
+    
+    .content-section {
+      padding: 50px 15px;
+    }
+    
+    .page_header {
+      padding: 50px 15px;
+    }
+    
+    .profile-circle {
+      width: 120px;
+      height: 120px;
+    }
+    
+    .section-title {
+      font-size: 2em;
+    }
+    
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .stat-number {
+      font-size: 2.5em;
+    }
+    
+    .feature-card {
+      padding: 30px 20px;
+    }
+    
+    .contact-title {
+      font-size: 2.2em;
+    }
+    
+    .contact-description {
+      font-size: 1em;
+    }
+    
+    .skill-card {
+      min-width: 140px;
+      padding: 20px 15px;
+    }
+    
+    .skill-card h4 {
+      font-size: 0.9em;
+    }
+  }
+
+  /* Tablet landscape */
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .hero-title {
+      font-size: 3.8em;
+    }
+    
+    .content-section {
+      padding: 80px 40px;
+    }
+    
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+    }
+  }
+
+  .floating_element {
+    position: relative;
+    float: left;
+  }
+
+  /* Premium Loader Styles */
+  .luxury-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-gradient);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.8s ease;
+  }
+
+  .luxury-loader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .loader-container {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .loader-logo {
+    margin-bottom: 30px;
+  }
+
+  .logo-circle {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: logoFloat 3s ease-in-out infinite;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .logo-inner {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--gold-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    color: #2c3e50;
+    animation: logoSpin 4s linear infinite;
+  }
+
+  @keyframes logoFloat {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-10px) scale(1.05); }
+  }
+
+  @keyframes logoSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .loader-text {
+    margin-bottom: 40px;
+  }
+
+  .loader-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: titleGlow 2s ease-in-out infinite alternate;
+  }
+
+  .loader-subtitle {
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: subtitleFade 3s ease-in-out infinite;
+  }
+
+  @keyframes titleGlow {
+    0% { text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); }
+    100% { text-shadow: 0 4px 30px rgba(255, 255, 255, 0.2), 0 4px 20px rgba(0, 0, 0, 0.3); }
+  }
+
+  @keyframes subtitleFade {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 0.6; }
+  }
+
+  .loader-progress {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--gold-gradient);
+    border-radius: 10px;
+    width: 0%;
+    transition: width 0.1s ease;
+    box-shadow: 0 0 20px rgba(247, 151, 30, 0.6);
+    animation: progressGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes progressGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(247, 151, 30, 0.6); }
+    50% { box-shadow: 0 0 30px rgba(247, 151, 30, 0.9), 0 0 40px rgba(247, 151, 30, 0.4); }
+  }
+
+  .progress-percent {
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .loader-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: particleFloat 4s ease-in-out infinite;
+  }
+
+  .particle:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 3s;
+  }
+
+  .particle:nth-child(2) {
+    top: 80%;
+    left: 20%;
+    animation-delay: 0.5s;
+    animation-duration: 4s;
+  }
+
+  .particle:nth-child(3) {
+    top: 30%;
+    right: 15%;
+    animation-delay: 1s;
+    animation-duration: 3.5s;
+  }
+
+  .particle:nth-child(4) {
+    bottom: 20%;
+    right: 25%;
+    animation-delay: 1.5s;
+    animation-duration: 4.5s;
+  }
+
+  .particle:nth-child(5) {
+    top: 60%;
+    left: 70%;
+    animation-delay: 2s;
+    animation-duration: 3.2s;
+  }
+
+  .particle:nth-child(6) {
+    bottom: 40%;
+    left: 80%;
+    animation-delay: 2.5s;
+    animation-duration: 3.8s;
+  }
+
+  @keyframes particleFloat {
+    0%, 100% {
+      transform: translateY(0px) scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translateY(-30px) scale(1.2);
+      opacity: 1;
+    }
+  }
+
+  /* Hide main content until loader finishes */
+  .main-content {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .main-content.loaded {
+    opacity: 1;
+  }
+    </style>
+  </head>
+  <body>
+    <!-- Premium Loader -->
+    <div class="luxury-loader" id="luxuryLoader">
+      <div class="loader-container">
+        <div class="loader-content">
+          <div class="loader-logo">
+            <div class="logo-circle">
+              <div class="logo-inner">
+                <i class="fas fa-code"></i>
+              </div>
+            </div>
+          </div>
+          <div class="loader-text">
+            <h2 class="loader-title">Ajadiya Manish</h2>
+            <p class="loader-subtitle">Elite Developer Portfolio</p>
+          </div>
+          <div class="loader-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-percent" id="progressPercent">0%</div>
+          </div>
+        </div>
+        <div class="loader-particles">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+    
+    <!-- Floating Background Shapes -->
+    <div class="floating-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+
+    <div class="container">
+
+  <!-- div.page_header {
+    height: 180px;
+    width: 100%;
+
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  div.page_header span {
+    margin: 15px 0px 0px 50px;
+    color: #FFFFFF;
+    font-size: 180%;
+    font-weight: bold;
+  }
+
+  div.page_header img {
+    margin: 3px 0px 0px 40px;
+
+    border: 0px 0px 0px;
+  }
+
+  div.banner {
+    padding: 9px 6px 9px 6px;
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 112%;
+    text-align: center;
+    position: absolute;
+    left: 40%;
+    bottom: 30px;
+    width: 20%;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  div.table_of_contents {
+    clear: left;
+
+    min-width: 200px;
+
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.table_of_contents_item {
+    clear: left;
+
+    width: 100%;
+
+    margin: 4px 0px 0px 0px;
+
+    background-color: #FFFFFF;
+
+    color: #000000;
+    text-align: left;
+  }
+
+  div.table_of_contents_item a {
+    margin: 6px 0px 0px 6px;
+  }
+
+  div.content_section {
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.content_section_text {
+    padding: 4px 8px 4px 8px;
+
+    color: #000000;
+    font-size: 100%;
+  }
+
+  div.content_section_text pre {
+    margin: 8px 0px 8px 0px;
+    padding: 8px 8px 8px 8px;
+
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #000000;
+
+    background-color: #F5F6F7;
+
+    font-style: italic;
+  }
+
+  div.content_section_text p {
+    margin-bottom: 6px;
+  }
+
+  div.content_section_text ul, div.content_section_text li {
+    padding: 4px 8px 4px 16px;
+  }
+
+  div.section_header {
+    padding: 3px 6px 3px 6px;
+
+    background-color: #8E9CB2;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 112%;
+    text-align: center;
+  }
+
+  div.section_header_grey {
+    background-color: #9F9386;
+  }
+
+  .floating_element {
+    position: relative;
+    float: left;
+  }
+
+  div.table_of_contents_item a,
+  div.content_section_text a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  div.table_of_contents_item a:link,
+  div.table_of_contents_item a:visited,
+  div.table_of_contents_item a:active {
+    color: #000000;
+  }
+
+  div.table_of_contents_item a:hover {
+    background-color: #000000;
+
+    color: #FFFFFF;
+  }
+
+  div.content_section_text a:link,
+  div.content_section_text a:visited,
+   div.content_section_text a:active {
+    background-color: #DCDFE6;
+
+    color: #000000;
+  }
+
+  div.content_section_text a:hover {
+    background-color: #000000;
+
+    color: #DCDFE6;
+  } -->
+  </head>
+  <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+    
+    <!-- Floating Background Shapes -->
+    <div class="floating-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+
+    <div class="container">
+    <div class="main_page main-content">
+      <div class="page_header" id="home">
+        <!-- Header Image -->
+        <div class="header-image">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+               alt="Professional Developer" 
+               class="hero-bg-image">
+          <div class="header-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+          <div class="profile-image">
+            <div class="profile-circle">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                   alt="Ajadiya Manish" 
+                   class="profile-img">
+            </div>
+          </div>
+          <h1 class="hero-title">Ajadiya Manish</h1>
+          <p class="hero-subtitle">Full-Stack Developer & Tech Enthusiast</p>
+          <p class="hero-description">
+            Passionate about creating exceptional digital experiences through innovative web development, 
+            modern design principles, and cutting-edge technologies.
+          </p>
+          <div class="cta-buttons">
+            <a href="#about" class="btn btn-primary">
+              <i class="fas fa-user"></i>
+              About Me
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              <i class="fas fa-code"></i>
+              View Projects
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- About Section -->
+      <div class="content-section" id="about">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            Dedicated developer with a passion for creating innovative solutions and beautiful user experiences
+          </p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="feature-title">Full-Stack Development</h3>
+            <p class="feature-description">
+              Expertise in both frontend and backend technologies, creating complete web applications 
+              from conception to deployment.
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 class="feature-title">Responsive Design</h3>
+            <p class="feature-description">
+              Creating beautiful, responsive interfaces that work seamlessly across all devices 
+              and screen sizes.
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="feature-title">Database Management</h3>
+            <p class="feature-description">
+              Proficient in designing and optimizing databases for performance, scalability, 
+              and data integrity.
+            </p>
+          </div>
+        </div>
+
+      <!-- Skills Section -->
+      <div class="content-section" id="skills">
+        <div class="section-header">
+          <h2 class="section-title">My Skills</h2>
+          <p class="section-subtitle">
+            Technologies and tools I use to create exceptional digital experiences
+          </p>
+        </div>
+
+        <div class="skills-container">
+          <div class="skills-slider">
+            <div class="skills-track">
+              <!-- First set of skills -->
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="skill-icon" alt="HTML" />
+                <h4>HTML</h4>
+                <div class="level-label">95%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="skill-icon" alt="CSS" />
+                <h4>CSS</h4>
+                <div class="level-label">90%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="skill-icon" alt="JavaScript" />
+                <h4>JavaScript</h4>
+                <div class="level-label">85%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="skill-icon" alt="PHP" />
+                <h4>PHP</h4>
+                <div class="level-label">80%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-icon" alt="MySQL" />
+                <h4>MySQL</h4>
+                <div class="level-label">75%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" class="skill-icon" alt="Laravel" />
+                <h4>Laravel</h4>
+                <div class="level-label">85%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="skill-icon" alt="GitHub" />
+                <h4>GitHub</h4>
+                <div class="level-label">90%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="skill-icon" alt="React" />
+                <h4>React</h4>
+                <div class="level-label">80%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="skill-icon" alt="Node.js" />
+                <h4>Node.js</h4>
+                <div class="level-label">75%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-icon" alt="Python" />
+                <h4>Python</h4>
+                <div class="level-label">70%</div>
+              </div>
+              <!-- Duplicate set for seamless loop -->
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="skill-icon" alt="HTML" />
+                <h4>HTML</h4>
+                <div class="level-label">95%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="skill-icon" alt="CSS" />
+                <h4>CSS</h4>
+                <div class="level-label">90%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="skill-icon" alt="JavaScript" />
+                <h4>JavaScript</h4>
+                <div class="level-label">85%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="skill-icon" alt="PHP" />
+                <h4>PHP</h4>
+                <div class="level-label">80%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-icon" alt="MySQL" />
+                <h4>MySQL</h4>
+                <div class="level-label">75%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" class="skill-icon" alt="Laravel" />
+                <h4>Laravel</h4>
+                <div class="level-label">85%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="skill-icon" alt="GitHub" />
+                <h4>GitHub</h4>
+                <div class="level-label">90%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="skill-icon" alt="React" />
+                <h4>React</h4>
+                <div class="level-label">80%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="skill-icon" alt="Node.js" />
+                <h4>Node.js</h4>
+                <div class="level-label">75%</div>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-icon" alt="Python" />
+                <h4>Python</h4>
+                <div class="level-label">70%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Section -->
+      <div class="stats-section" id="experience">
+        <div class="section-header">
+          <h2 class="section-title">Professional Experience</h2>
+          <p class="section-subtitle">
+            Years of dedication and continuous learning in the tech industry
+          </p>
+        </div>
+        
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Satisfaction Rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+      <div class="content-section" id="projects">
+        <div class="section-header">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">
+            Showcasing my latest work and innovative solutions across various technologies
+          </p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3 class="feature-title">E-Commerce Platform</h3>
+            <p class="feature-description">
+              Complete online shopping solution with payment integration, inventory management, 
+              and modern user interface.
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="feature-title">Analytics Dashboard</h3>
+            <p class="feature-description">
+              Real-time data visualization dashboard with interactive charts, reporting features, 
+              and performance metrics.
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="feature-title">Social Media App</h3>
+            <p class="feature-description">
+              Modern social networking platform with real-time messaging, content sharing, 
+              and community features.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="contact-section" id="contact">
+        <h2 class="contact-title">Let's Work Together</h2>
+        <p class="contact-description">
+          Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
+        </p>
+        
+        <div class="cta-buttons">
+          <a href="mailto:ajadiyamanish111@gmail.com?subject=Let's Work Together - Project Inquiry&body=Hi Ajadiya Manish,%0D%0A%0D%0AI am interested in discussing a project with you.%0D%0A%0D%0AProject Details:%0D%0A- Project Type: %0D%0A- Budget Range: %0D%0A- Timeline: %0D%0A- Description: %0D%0A%0D%0APlease let me know your availability.%0D%0A%0D%0ABest regards," class="btn btn-primary" id="emailBtn">
+            <i class="fas fa-envelope"></i>
+            <span class="btn-text">Get In Touch</span>
+          </a>
+          <a href="https://wa.me/+917862957438?text=Hi%20Ajadiya%20Manish!%20I%20am%20interested%20in%20your%20development%20services.%20How%20can%20you%20help%20me%20with%20my%20project?" class="btn btn-success" id="whatsappBtn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="btn-text">WhatsApp Support</span>
+          </a>
+          <a href="assets/Ajadiya_Manish cv.pdf" class="btn btn-secondary" id="downloadResumeBtn" download="Ajadiya_Manish_CV.pdf" target="_blank">
+            <i class="fas fa-download download-icon"></i>
+            <span class="btn-text">Download Resume</span>
+            <div class="download-progress">
+              <div class="progress-bar-download">
+                <div class="progress-fill-download"></div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="social-links">
+          <a href="#" class="social-link" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" class="social-link" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" class="social-link" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-link" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <!-- Help Desk Bot -->
+    <div class="help-desk-bot">
+      <button class="bot-trigger" id="botTrigger">
+        <div class="bot-pulse"></div>
+        <i class="fas fa-robot"></i>
+      </button>
+      
+      <div class="bot-chat-window" id="botChatWindow">
+        <div class="bot-header">
+          <div class="bot-avatar">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="bot-info">
+            <h4>Premium AI Assistant</h4>
+            <p class="bot-status">
+              <span class="status-dot"></span>
+              Online • Ready to solve queries
+            </p>
+          </div>
+          <button class="bot-close" id="botClose">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        
+        <div class="bot-messages" id="botMessages">
+          <div class="bot-message">
+            🤖✨ Welcome! I'm your premium AI assistant. I can help you with everything about Ajadiya Manish's services, projects, and expertise. What would you like to know?
+          </div>
+          <div class="quick-actions">
+            <div class="quick-action" data-message="Tell me about your premium services">� Premium Services</div>
+            <div class="quick-action" data-message="What are your project costs and pricing?">💰 Pricing & Costs</div>
+            <div class="quick-action" data-message="How can I contact and hire you?">📞 Contact & Hire</div>
+            <div class="quick-action" data-message="Show me your best projects and portfolio">🚀 Portfolio & Projects</div>
+            <div class="quick-action" data-message="What technologies and skills do you master?">⚡ Skills & Tech</div>
+            <div class="quick-action" data-message="What are your project timelines and availability?">⏰ Timeline & Availability</div>
+          </div>
+        </div>
+        
+        <div class="bot-input-area">
+          <input type="text" class="bot-input" id="botInput" placeholder="Ask me anything about services, pricing, projects..." />
+          <button class="bot-send" id="botSend">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Premium Loader Animation
+      window.addEventListener('load', function() {
+        const loader = document.getElementById('luxuryLoader');
+        const progressFill = document.getElementById('progressFill');
+        const progressPercent = document.getElementById('progressPercent');
+        const mainContent = document.querySelector('.main-content');
+        
+        let progress = 0;
+        const duration = 2000; // 2 seconds
+        const interval = 20; // Update every 20ms
+        const increment = (100 / (duration / interval));
+        
+        const progressTimer = setInterval(() => {
+          progress += increment;
+          
+          if (progress >= 100) {
+            progress = 100;
+            clearInterval(progressTimer);
+            
+            // Hide loader and show content
+            setTimeout(() => {
+              loader.classList.add('fade-out');
+              mainContent.classList.add('loaded');
+              
+              setTimeout(() => {
+                loader.style.display = 'none';
+              }, 800);
+            }, 300);
+          }
+          
+          progressFill.style.width = progress + '%';
+          progressPercent.textContent = Math.floor(progress) + '%';
+        }, interval);
+      });
+
+      // Scroll Progress Indicator
+      window.addEventListener('scroll', function() {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (scrollTop / scrollHeight) * 100;
+        document.getElementById('scrollProgress').style.width = scrolled + '%';
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Enhanced Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            
+            // Add stagger effect for feature cards
+            const cards = entry.target.querySelectorAll('.feature-card');
+            cards.forEach((card, index) => {
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, index * 150);
+            });
+          }
+        });
+      }, observerOptions);
+
+      // Document ready functions
+      document.addEventListener('DOMContentLoaded', function() {
+        // Observe all sections for animations
+        const sections = document.querySelectorAll('.content-section, .stats-section, .contact-section');
+        sections.forEach(section => {
+          section.style.opacity = '0';
+          section.style.transform = 'translateY(30px)';
+          section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+          observer.observe(section);
+        });
+
+        // Enhanced counter animation for stats
+        const animateCounters = () => {
+          const counters = document.querySelectorAll('.stat-number');
+          counters.forEach(counter => {
+            const target = parseInt(counter.textContent.replace(/[^0-9]/g, ''));
+            const suffix = counter.textContent.replace(/[0-9]/g, '');
+            const increment = target / 100;
+            let current = 0;
+            
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                counter.textContent = target + suffix;
+                clearInterval(timer);
+              } else {
+                counter.textContent = Math.floor(current) + suffix;
+              }
+            }, 20);
+          });
+        };
+
+        // Trigger counter animation when stats section is visible
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+          const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                animateCounters();
+                statsObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.5 });
+          
+          statsObserver.observe(statsSection);
+        }
+
+        // Enhanced parallax effect
+        window.addEventListener('scroll', function() {
+          const scrolled = window.pageYOffset;
+          const rate = scrolled * -0.5;
+          
+          // Parallax for background image
+          const bgImage = document.querySelector('.hero-bg-image');
+          if (bgImage) {
+            bgImage.style.transform = `translateY(${rate}px)`;
+          }
+          
+          // Floating shapes parallax
+          const shapes = document.querySelectorAll('.shape');
+          shapes.forEach((shape, index) => {
+            const speed = 0.5 + (index * 0.2);
+            shape.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.1}deg)`;
+          });
+        });
+
+        // Enhanced typing effect for hero subtitle
+        const subtitle = document.querySelector('.hero-subtitle');
+        if (subtitle) {
+          const text = subtitle.textContent;
+          subtitle.textContent = '';
+          subtitle.style.borderRight = '2px solid white';
+          let index = 0;
+          
+          const typeWriter = () => {
+            if (index < text.length) {
+              subtitle.textContent += text.charAt(index);
+              index++;
+              setTimeout(typeWriter, 80);
+            } else {
+              setTimeout(() => {
+                subtitle.style.borderRight = 'none';
+              }, 1000);
+            }
+          };
+          
+          setTimeout(typeWriter, 3000); // Start after loader
+        }
+
+        // Add magnetic effect to buttons
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => {
+          button.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            this.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.05)`;
+          });
+          
+          button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translate(0, 0) scale(1)';
+          });
+        });
+
+        // Add tilt effect to feature cards
+        const featureCards = document.querySelectorAll('.feature-card');
+        featureCards.forEach(card => {
+          card.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(20px)`;
+          });
+          
+          card.addEventListener('mouseleave', function() {
+            this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+          });
+        });
+
+        // Download Resume Button Functionality
+        const downloadBtn = document.getElementById('downloadResumeBtn');
+        if (downloadBtn) {
+          downloadBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const btnText = this.querySelector('.btn-text');
+            const progressFill = this.querySelector('.progress-fill-download');
+            const downloadIcon = this.querySelector('.download-icon');
+            
+            // Start downloading animation
+            this.classList.add('downloading');
+            btnText.textContent = 'Download';
+            
+            // Simulate download progress
+            let progress = 0;
+            const downloadInterval = setInterval(() => {
+              progress += Math.random() * 15 + 5; // Random progress increment
+              
+              if (progress >= 100) {
+                progress = 100;
+                clearInterval(downloadInterval);
+                
+                // Complete animation
+                progressFill.style.width = '100%';
+                
+                setTimeout(() => {
+                  this.classList.remove('downloading');
+                  this.classList.add('completed');
+                  btnText.textContent = 'View Resume';
+                  downloadIcon.className = 'fas fa-eye download-icon';
+                  
+                  // Actually trigger the download
+                  const link = document.createElement('a');
+                  link.href = 'assets/Ajadiya_Manish cv.pdf';
+                  link.download = 'Ajadiya_Manish_CV.pdf';
+                  link.target = '_blank';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  
+                  // Reset button after 3 seconds
+                  setTimeout(() => {
+                    this.classList.remove('completed');
+                    btnText.textContent = 'Download Resume';
+                    downloadIcon.className = 'fas fa-download download-icon';
+                    progressFill.style.width = '0%';
+                  }, 3000);
+                }, 500);
+              } else {
+                progressFill.style.width = progress + '%';
+              }
+            }, 100);
+          });
+          
+          // Change to View Resume when completed state
+          downloadBtn.addEventListener('click', function(e) {
+            if (this.classList.contains('completed')) {
+              e.preventDefault();
+              
+              // Open PDF in new tab for viewing
+              window.open('assets/Ajadiya_Manish cv.pdf', '_blank');
+              
+              // Add view animation
+              this.style.animation = 'completedPulse 0.6s ease-in-out';
+              setTimeout(() => {
+                this.style.animation = '';
+              }, 600);
+            }
+          });
+        }
+
+        // Email Button Enhancement
+        const emailBtn = document.getElementById('emailBtn');
+        if (emailBtn) {
+          emailBtn.addEventListener('click', function(e) {
+            // Add sending animation
+            const btnText = this.querySelector('.btn-text');
+            const originalText = btnText.textContent;
+            
+            btnText.textContent = 'Opening Mail...';
+            this.style.animation = 'emailPulse 0.8s ease-in-out';
+            
+            setTimeout(() => {
+              btnText.textContent = originalText;
+              this.style.animation = '';
+            }, 1500);
+          });
+        }
+
+        // WhatsApp Button Enhancement
+        const whatsappBtn = document.getElementById('whatsappBtn');
+        if (whatsappBtn) {
+          whatsappBtn.addEventListener('click', function(e) {
+            // Add WhatsApp opening animation
+            const btnText = this.querySelector('.btn-text');
+            const originalText = btnText.textContent;
+            
+            btnText.textContent = 'Opening WhatsApp...';
+            this.style.animation = 'whatsappPulse 0.8s ease-in-out';
+            
+            setTimeout(() => {
+              btnText.textContent = originalText;
+              this.style.animation = '';
+            }, 1500);
+          });
+        }
+      });
+
+      // Add glitch effect to title on hover
+      const heroTitle = document.querySelector('.hero-title');
+      if (heroTitle) {
+        heroTitle.addEventListener('mouseenter', function() {
+          this.style.animation = 'none';
+          this.offsetHeight; // Trigger reflow
+          this.style.animation = 'glitch 0.3s ease-in-out';
+        });
+      }
+
+      // Enhanced CSS animations
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes glitch {
+          0% { transform: translate(0); }
+          20% { transform: translate(-2px, 2px); }
+          40% { transform: translate(-2px, -2px); }
+          60% { transform: translate(2px, 2px); }
+          80% { transform: translate(2px, -2px); }
+          100% { transform: translate(0); }
+        }
+        
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.05); }
+        }
+        
+        .feature-card {
+          transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) !important;
+        }
+        
+        .btn {
+          transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1) !important;
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Help Desk Bot Functionality
+      const botTrigger = document.getElementById('botTrigger');
+      const botChatWindow = document.getElementById('botChatWindow');
+      const botClose = document.getElementById('botClose');
+      const botInput = document.getElementById('botInput');
+      const botSend = document.getElementById('botSend');
+      const botMessages = document.getElementById('botMessages');
+
+      if (botTrigger && botChatWindow) {
+        let isOpen = false;
+
+        // Toggle chat window
+        botTrigger.addEventListener('click', function() {
+          isOpen = !isOpen;
+          botChatWindow.classList.toggle('active', isOpen);
+          if (isOpen) {
+            botInput.focus();
+          }
+        });
+
+        // Close chat window
+        botClose.addEventListener('click', function() {
+          isOpen = false;
+          botChatWindow.classList.remove('active');
+        });
+
+        // Quick actions
+        document.querySelectorAll('.quick-action').forEach(action => {
+          action.addEventListener('click', function() {
+            const message = this.getAttribute('data-message');
+            addUserMessage(message);
+            handleBotResponse(message);
+          });
+        });
+
+        // Send message
+        function sendMessage() {
+          const message = botInput.value.trim();
+          if (message) {
+            addUserMessage(message);
+            botInput.value = '';
+            handleBotResponse(message);
+          }
+        }
+
+        botSend.addEventListener('click', sendMessage);
+        botInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            sendMessage();
+          }
+        });
+
+        // Add user message
+        function addUserMessage(message) {
+          const messageDiv = document.createElement('div');
+          messageDiv.className = 'bot-message user';
+          messageDiv.textContent = message;
+          botMessages.appendChild(messageDiv);
+          botMessages.scrollTop = botMessages.scrollHeight;
+        }
+
+        // Add bot message
+        function addBotMessage(message) {
+          const messageDiv = document.createElement('div');
+          messageDiv.className = 'bot-message';
+          messageDiv.innerHTML = message;
+          botMessages.appendChild(messageDiv);
+          botMessages.scrollTop = botMessages.scrollHeight;
+        }
+
+        // Handle bot responses
+        function handleBotResponse(userMessage) {
+          // Show typing indicator
+          showTypingIndicator();
+          
+          setTimeout(() => {
+            hideTypingIndicator();
+            const message = userMessage.toLowerCase();
+            let response = '';
+
+            if (message.includes('service') || message.includes('premium') || message.includes('work') || message.includes('do')) {
+              response = `💎 <strong>Premium Development Services</strong><br><br>
+              🚀 <strong>Full-Stack Development</strong><br>
+              • Modern web applications with cutting-edge technology<br>
+              • Responsive, mobile-first design approach<br>
+              • Performance optimization and SEO-ready<br><br>
+              
+              ⚡ <strong>Backend Solutions</strong><br>
+              • PHP, Laravel, Node.js expertise<br>
+              • Secure API development and integration<br>
+              • Database design and optimization<br><br>
+              
+              🎨 <strong>Frontend Excellence</strong><br>
+              • React, Vue.js, modern JavaScript<br>
+              • Interactive UI/UX design<br>
+              • Cross-browser compatibility<br><br>
+              
+              Would you like details about any specific service area?`;
+            } else if (message.includes('price') || message.includes('cost') || message.includes('budget') || message.includes('pricing')) {
+              response = `💰 <strong>Premium Pricing Structure</strong><br><br>
+              🌟 <strong>Website Development</strong><br>
+              • Landing Pages: $800 - $2,000<br>
+              • Business Websites: $1,500 - $4,000<br>
+              • E-commerce Sites: $3,000 - $8,000<br><br>
+              
+              🚀 <strong>Web Applications</strong><br>
+              • Custom Apps: $5,000 - $15,000<br>
+              • SaaS Platforms: $10,000 - $25,000+<br>
+              • Enterprise Solutions: $15,000+<br><br>
+              
+              🔧 <strong>Additional Services</strong><br>
+              • API Development: $1,000 - $3,000<br>
+              • Maintenance: $100 - $500/month<br>
+              • Consulting: $100 - $150/hour<br><br>
+              
+              💎 All projects include premium features like responsive design, SEO optimization, and 3 months support!`;
+            } else if (message.includes('contact') || message.includes('hire') || message.includes('reach') || message.includes('email')) {
+              response = `📞 <strong>Ready to Start Your Premium Project?</strong><br><br>
+              ✨ <strong>Direct Contact</strong><br>
+              • 📧 Email: ajadiyamanish111@gmail.com<br>
+              • 📱 WhatsApp: +91 7862957438<br>
+              • 💼 LinkedIn: Connect via social links<br>
+              • 🌐 GitHub: View my latest projects<br><br>
+              
+              ⚡ <strong>Quick Response Promise</strong><br>
+              • Initial response: Within 2-4 hours<br>
+              • Project consultation: Same day<br>
+              • Detailed proposal: Within 24 hours<br><br>
+              
+              🎯 <strong>What to Include</strong><br>
+              • Project description and goals<br>
+              • Timeline and budget expectations<br>
+              • Any specific requirements<br><br>
+              
+              Click the contact buttons in this chat or on the main site to get started instantly!`;
+            } else if (message.includes('project') || message.includes('portfolio') || message.includes('work') || message.includes('best')) {
+              response = `🚀 <strong>Premium Project Showcase</strong><br><br>
+              💼 <strong>E-Commerce Excellence</strong><br>
+              • Multi-vendor marketplace with advanced filtering<br>
+              • Secure payment gateway integration<br>
+              • Real-time inventory management<br>
+              • Mobile app companion<br><br>
+              
+              📊 <strong>Analytics Dashboard</strong><br>
+              • Real-time data visualization<br>
+              • Interactive charts and reports<br>
+              • Custom KPI tracking<br>
+              • Export functionality<br><br>
+              
+              🌐 <strong>Social Media Platform</strong><br>
+              • Real-time messaging system<br>
+              • Content sharing and engagement<br>
+              • Advanced notification system<br>
+              • Progressive Web App features<br><br>
+              
+              🏢 <strong>Enterprise Solutions</strong><br>
+              • Custom CRM systems<br>
+              • Workflow automation tools<br>
+              • API integrations<br>
+              • Scalable architecture<br><br>
+              
+              Each project features premium code quality, documentation, and ongoing support!`;
+            } else if (message.includes('technology') || message.includes('tech') || message.includes('skill') || message.includes('master')) {
+              response = `⚡ <strong>Master-Level Technical Expertise</strong><br><br>
+              🎨 <strong>Frontend Mastery</strong><br>
+              • HTML5, CSS3, JavaScript ES6+ (95% expertise)<br>
+              • React, Vue.js, modern frameworks (90%)<br>
+              • Responsive design, animations, UX (95%)<br>
+              • Progressive Web Apps, performance optimization<br><br>
+              
+              🔧 <strong>Backend Excellence</strong><br>
+              • PHP, Laravel framework (90% expertise)<br>
+              • Node.js, Express.js (85%)<br>
+              • Python, Django (80%)<br>
+              • RESTful APIs, microservices architecture<br><br>
+              
+              🗄️ <strong>Database & DevOps</strong><br>
+              • MySQL, PostgreSQL, MongoDB (85%)<br>
+              • Git, GitHub, version control (95%)<br>
+              • AWS, Docker, deployment strategies<br>
+              • Testing, debugging, optimization<br><br>
+              
+              🚀 <strong>Always Learning</strong><br>
+              • Latest web technologies and trends<br>
+              • AI/ML integration possibilities<br>
+              • Security best practices<br>
+              • Performance optimization techniques`;
+            } else if (message.includes('time') || message.includes('duration') || message.includes('timeline') || message.includes('availability')) {
+              response = `⏰ <strong>Premium Project Timelines</strong><br><br>
+              🚀 <strong>Development Speed</strong><br>
+              • Landing Pages: 3-7 days<br>
+              • Business Websites: 1-3 weeks<br>
+              • E-commerce Sites: 3-6 weeks<br>
+              • Custom Applications: 2-4 months<br><br>
+              
+              ⚡ <strong>Rush Projects Available</strong><br>
+              • 50% faster delivery (premium rate)<br>
+              • Dedicated development time<br>
+              • Priority support and communication<br><br>
+              
+              📅 <strong>Current Availability</strong><br>
+              • New projects: Available immediately<br>
+              • Consultation calls: Within 24 hours<br>
+              • Project kickoff: Within 1 week<br><br>
+              
+              🎯 <strong>Project Phases</strong><br>
+              • Planning & Design: 10-20% of timeline<br>
+              • Development: 60-70% of timeline<br>
+              • Testing & Launch: 10-20% of timeline<br>
+              • Support & Optimization: Ongoing<br><br>
+              
+              Every timeline includes buffer time for revisions and quality assurance!`;
+            } else if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
+              response = `👋 <strong>Hello! Welcome to Premium Support</strong><br><br>
+              I'm your dedicated AI assistant, here to provide comprehensive information about Ajadiya Manish's premium development services. <br><br>
+              
+              🎯 <strong>I can help you with:</strong><br>
+              • 💎 Premium service details and capabilities<br>
+              • 💰 Transparent pricing and project costs<br>
+              • 📞 Direct contact and hiring process<br>
+              • 🚀 Portfolio showcase and case studies<br>
+              • ⚡ Technical expertise and skills<br>
+              • ⏰ Project timelines and availability<br><br>
+              
+              What would you like to explore first? Feel free to ask anything or use the quick action buttons below!`;
+            } else {
+              response = `🤖 <strong>I understand you're asking about "${userMessage}"</strong><br><br>
+              
+              Let me help you find the perfect solution! Here are the main areas I can assist with:<br><br>
+              
+              💎 <strong>Premium Services</strong> - Full-stack development expertise<br>
+              💰 <strong>Pricing & Costs</strong> - Transparent project pricing<br>
+              📞 <strong>Contact & Hire</strong> - Direct communication channels<br>
+              🚀 <strong>Portfolio & Projects</strong> - Showcase of excellence<br>
+              ⚡ <strong>Skills & Technology</strong> - Technical expertise<br>
+              ⏰ <strong>Timeline & Availability</strong> - Project scheduling<br><br>
+              
+              You can also try asking more specific questions like:<br>
+              • "What's your experience with React?"<br>
+              • "How much for an e-commerce site?"<br>
+              • "Can you build mobile apps?"<br>
+              • "What's included in your premium services?"<br><br>
+              
+              What would you like to know more about?`;
+            }
+
+            addBotMessage(response);
+          }, 1500);
+        }
+
+        // Show typing indicator
+        function showTypingIndicator() {
+          const typingDiv = document.createElement('div');
+          typingDiv.className = 'typing-indicator';
+          typingDiv.id = 'typingIndicator';
+          typingDiv.innerHTML = `
+            <span>AI is thinking</span>
+            <div class="typing-dots">
+              <div class="typing-dot"></div>
+              <div class="typing-dot"></div>
+              <div class="typing-dot"></div>
+            </div>
+          `;
+          botMessages.appendChild(typingDiv);
+          botMessages.scrollTop = botMessages.scrollHeight;
+        }
+
+        // Hide typing indicator
+        function hideTypingIndicator() {
+          const typingIndicator = document.getElementById('typingIndicator');
+          if (typingIndicator) {
+            typingIndicator.remove();
+          }
+        }
+
+        // Close chat when clicking outside
+        document.addEventListener('click', function(e) {
+          if (isOpen && !botChatWindow.contains(e.target) && !botTrigger.contains(e.target)) {
+            isOpen = false;
+            botChatWindow.classList.remove('active');
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
